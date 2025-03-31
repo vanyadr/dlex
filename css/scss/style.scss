@@ -980,6 +980,15 @@ div {
                 position: relative;
                 cursor: pointer;
                 transition: background-color .4s;
+                
+                @include tablet {
+                    width: 3rem;
+                    height: 3rem;
+                }
+                @include mobile {
+                    width: 3rem;
+                    height: 3rem;
+                }
             }
 
             .slider-button-prev:hover,
@@ -996,6 +1005,13 @@ div {
                 justify-content: center;
                 align-items: center;
                 gap: .4rem;
+                
+                @include tablet {
+                    gap: .6rem;
+                }
+                @include mobile {
+                    gap: .6rem;
+                }
 
                 li {
                     display: block;
@@ -1003,8 +1019,16 @@ div {
                     width: 0.2rem;
                     height: 0.2rem;
                     background: #000;
-                    opacity: 1;
                     border-radius: 50%;
+                    
+                    @include tablet {
+                        width: 0.4rem;
+                        height: 0.4rem;
+                    }
+                    @include mobile {
+                        width: 0.4rem;
+                        height: 0.4rem;
+                    }
                 }
 
                 .slick-active {
@@ -1012,6 +1036,15 @@ div {
                     width: 1.2rem;
                     height: 1.2rem;
                     background: #fff;
+                    
+                    @include tablet {
+                        width: 1.4rem;
+                        height: 1.4rem;
+                    }
+                    @include mobile {
+                        width: 1.4rem;
+                        height: 1.4rem;
+                    }
                 }
 
                 .slick-active::after {
@@ -1026,6 +1059,15 @@ div {
                     background: url('pseudo-img/active-bullet.svg');
                     background-size: contain;
                     background-repeat: no-repeat;
+                    
+                    @include tablet {
+                        width: 1.4rem;
+                        height: 1.4rem;
+                    }
+                    @include mobile {
+                        width: 1.4rem;
+                        height: 1.4rem;
+                    }
                 }
             }
 
@@ -1040,8 +1082,17 @@ div {
                 background: url('pseudo-img/arr-left.svg');
                 background-size: contain;
                 background-repeat: no-repeat;
+                
+                @include tablet {
+                    width: 1.2rem;
+                    height: 1.2rem;
+                }
+                @include mobile {
+                    width: 1.2rem;
+                    height: 1.2rem;
+                }
             }
-
+            
             .slider-button-next::after {
                 content: '';
                 position: absolute;
@@ -1053,6 +1104,15 @@ div {
                 background: url('pseudo-img/arr-right.svg');
                 background-size: contain;
                 background-repeat: no-repeat;
+                
+                @include tablet {
+                    width: 1.2rem;
+                    height: 1.2rem;
+                }
+                @include mobile {
+                    width: 1.2rem;
+                    height: 1.2rem;
+                }
             }
         }
     }
