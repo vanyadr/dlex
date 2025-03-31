@@ -21,10 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.querySelector('body');
     const header = document.querySelector('header');
     const closer = document.querySelector('.popup__closer');
+    const menuBtn = document.querySelector('.main-header__menu-img');
+    const mobileMenu = document.querySelector('.mobile-menu');
     let scrollPosition = 0;
 
     popupBtns.forEach((btn) => {
         btn.addEventListener('click', () => {
+            if (mobileMenu.classList.contains('menu-active')) {
+                mobileMenu.classList.toggle('menu-active');
+                menuBtn.classList.toggle('menu-icon-active');
+                body.classList.toggle('popup-open');
+            };
             overlay.classList.add('popup-active');
             popup.classList.add('popup-active');
             scrollPosition = window.pageYOffset;
@@ -54,9 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
             video.pause();
         }
     });
-
-    const menuBtn = document.querySelector('.main-header__menu-img');
-    const mobileMenu = document.querySelector('.mobile-menu');
 
     menuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('menu-active');
