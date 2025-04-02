@@ -30,6 +30,12 @@ $scrollbar: calc(100vw - 100%);
     }
 }
 
+@mixin mobileAlbum {
+    @media (orientation: landscape) and (max-height: 576px) {
+        @content;
+    }
+}
+
 html {
     font-size: 1.3889vw;
     line-height: 1;
@@ -1654,6 +1660,10 @@ div {
     transition: opacity .5s, visibility .5s;
     @include centerItem();
 
+    @include mobileAlbum {
+        height: 100%;
+    }
+    
     &__holder {
         width: 62%;
         height: 60%;
@@ -1672,6 +1682,10 @@ div {
         @include mobile {
             width: 95%;
             height: 60%;
+            grid-template-columns: 1fr;
+        }
+        
+        @include mobileAlbum {
             grid-template-columns: 1fr;
         }
     }
@@ -1720,16 +1734,29 @@ div {
         @include mobile {
             grid-column: 1 / -1;
         }
+        
+        @include mobileAlbum {
+            grid-column: 1 / -1;
+        }
     }
 
     &__logo {
         margin: 0 0 1.5rem 0;
+        
+        @include mobileAlbum {
+            margin: 0 0 .5rem 0;
+        }
     }
 
     &__header {
         font-weight: 600;
         line-height: 1.2;
         margin: 0 0 0.7rem 0;
+        
+        @include mobileAlbum {
+            margin: 0 0 .5rem 0;
+            font-size: 1rem;
+        }
     }
 
     &__text {
@@ -1738,6 +1765,11 @@ div {
         line-height: 1.2;
         text-align: center;
         margin: 0 0 2rem 0;
+        
+        @include mobileAlbum {
+            margin: 0 0 1rem 0;
+            font-size: .8rem;
+        }
     }
 
     &__form {
@@ -1751,11 +1783,14 @@ div {
             padding: 0.6rem 1rem;
             font-size: 1rem;
             margin: 0 0 1.5rem 0;
-
+            
             @include tablet {}
-
+            
             @include mobile {
                 height: 3.5rem;
+            }
+            @include mobileAlbum {
+                margin: 0 0 .5rem 0;
             }
         }
 
@@ -1770,9 +1805,12 @@ div {
             font-size: 1rem;
             color: #fff;
             margin: 0 0 1.5rem 0;
-
+            
             @include mobile {
                 height: 3.5rem;
+            }
+            @include mobileAlbum {
+                margin: 0 0 .5rem 0;
             }
         }
     }
@@ -1802,6 +1840,9 @@ div {
         @include tablet {}
 
         @include mobile {
+            display: none;
+        }
+        @include mobileAlbum {
             display: none;
         }
     }

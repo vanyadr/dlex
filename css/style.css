@@ -1551,6 +1551,11 @@ div {
   justify-content: center;
   align-items: center;
 }
+@media (orientation: landscape) and (max-height: 576px) {
+  .popup {
+    height: 100%;
+  }
+}
 .popup__holder {
   width: 62%;
   height: 60%;
@@ -1571,6 +1576,11 @@ div {
   .popup__holder {
     width: 95%;
     height: 60%;
+    grid-template-columns: 1fr;
+  }
+}
+@media (orientation: landscape) and (max-height: 576px) {
+  .popup__holder {
     grid-template-columns: 1fr;
   }
 }
@@ -1612,13 +1622,29 @@ div {
     grid-column: 1/-1;
   }
 }
+@media (orientation: landscape) and (max-height: 576px) {
+  .popup__form-holder {
+    grid-column: 1/-1;
+  }
+}
 .popup__logo {
   margin: 0 0 1.5rem 0;
+}
+@media (orientation: landscape) and (max-height: 576px) {
+  .popup__logo {
+    margin: 0 0 0.5rem 0;
+  }
 }
 .popup__header {
   font-weight: 600;
   line-height: 1.2;
   margin: 0 0 0.7rem 0;
+}
+@media (orientation: landscape) and (max-height: 576px) {
+  .popup__header {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+  }
 }
 .popup__text {
   font-weight: 600;
@@ -1626,6 +1652,12 @@ div {
   line-height: 1.2;
   text-align: center;
   margin: 0 0 2rem 0;
+}
+@media (orientation: landscape) and (max-height: 576px) {
+  .popup__text {
+    margin: 0 0 1rem 0;
+    font-size: 0.8rem;
+  }
 }
 .popup__form {
   width: 100%;
@@ -1642,6 +1674,11 @@ div {
 @media (max-width: 576px) {
   .popup__form input {
     height: 3.5rem;
+  }
+}
+@media (orientation: landscape) and (max-height: 576px) {
+  .popup__form input {
+    margin: 0 0 0.5rem 0;
   }
 }
 .popup__form button {
@@ -1661,6 +1698,11 @@ div {
 @media (max-width: 576px) {
   .popup__form button {
     height: 3.5rem;
+  }
+}
+@media (orientation: landscape) and (max-height: 576px) {
+  .popup__form button {
+    margin: 0 0 0.5rem 0;
   }
 }
 .popup__info {
@@ -1684,6 +1726,11 @@ div {
   background-image: url("pseudo-img/popup-img.jpg");
 }
 @media (max-width: 576px) {
+  .popup__img {
+    display: none;
+  }
+}
+@media (orientation: landscape) and (max-height: 576px) {
   .popup__img {
     display: none;
   }
